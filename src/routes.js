@@ -5,6 +5,7 @@ import { buildRoutePath } from './utils/build-route-path.js'
 const database = new Database()
 
 export const routes = [
+  //get
   {
     method: 'GET',
     path: buildRoutePath('/users'),
@@ -14,6 +15,7 @@ export const routes = [
       return res.end(JSON.stringify(users))
     }
   },
+  //post
   {
     method: 'POST',
     path: buildRoutePath('/users'),
@@ -31,6 +33,7 @@ export const routes = [
       return res.writeHead(201).end();
     }
   },
+  //delete
   {
     method: 'DELETE',
     path: buildRoutePath('/users/:id'),
